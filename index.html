@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Interactive Page</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+            flex-direction: column;
+        }
+        
+        #main-heading {
+            color: #333;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="main-heading">Hello, World!</h1>
+    <button id="change-text-btn">Click Me!</button>
+
+    <script>
+        // Get references to the HTML elements
+        const heading = document.getElementById('main-heading');
+        const button = document.getElementById('change-text-btn');
+
+        // Add an event listener to the button
+        button.addEventListener('click', () => {
+            // Change the heading's text when the button is clicked
+            heading.textContent = 'You clicked the button! 🎉';
+        });
+    </script>
+
+</body>
+</html>
