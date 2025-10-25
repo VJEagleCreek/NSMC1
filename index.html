@@ -3,56 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Interactive Page2</title>
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
-            margin: 0;
-            flex-direction: column;
-        }
-        
-        #main-heading {
-            color: #333;
-        }
-
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            border: none;
-            border-radius: 5px;
-            background-color: #007bff;
-            color: white;
-            transition: background-color 0.3s ease;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <title>Nalanda Sports & Music Club | Unlock Your Potential</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <h1 id="main-heading">Hellooo, World!</h1>
-    <button id="change-text-btn">Click Me!</button>
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">Nalanda Club</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">Programs</a></li>
+                    <li><a href="#">Locations</a></li>
+                    <li><a href="#">For Tutors</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#" class="btn btn-primary">Sign Up</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <script>
-        // Get references to the HTML elements
-        const heading = document.getElementById('main-heading');
-        const button = document.getElementById('change-text-btn');
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Unlock Your Child's Potential</h1>
+                <p>Discover and register for local sports and music classes with trusted tutors in your community.</p>
+                <div class="search-bar">
+                    <input type="text" placeholder="Enter your City or Zip Code">
+                    <button class="btn btn-primary">Find Classes</button>
+                </div>
+            </div>
+        </section>
 
-        // Add an event listener to the button
-        button.addEventListener('click', () => {
-            // Change the heading's text when the button is clicked
-            heading.textContent = 'You clicked the button! 🎉';
-        });
-    </script>
+        <section class="how-it-works container">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-icon">🔎</div>
+                    <h3>1. Find</h3>
+                    <p>Use our simple search to find top-rated tutors and classes near you.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">✅</div>
+                    <h3>2. Register</h3>
+                    <p>Book a spot in the perfect class with our easy and secure registration.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">🚀</div>
+                    <h3>3. Grow</h3>
+                    <p>Watch your child learn new skills, build confidence, and have fun!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-programs">
+            <div class="container">
+                <h2>Explore Our Programs</h2>
+                <div class="program-cards">
+                    <div class="card card-sports">
+                        <div class="card-content">
+                            <h3>Sports</h3>
+                            <p>From soccer to swimming, build teamwork and physical fitness.</p>
+                            <a href="#" class="btn btn-secondary">View Sports</a>
+                        </div>
+                    </div>
+                    <div class="card card-music">
+                        <div class="card-content">
+                            <h3>Music</h3>
+                            <p>Learn piano, guitar, voice, and more from passionate instructors.</p>
+                            <a href="#" class="btn btn-secondary">View Music</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="why-choose-us container">
+            <h2>Why Choose Nalanda?</h2>
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Verified Tutors</h3>
+                    <p>Every tutor on our platform is background-checked and vetted for quality.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📍</div>
+                    <h3>Local & Convenient</h3>
+                    <p>Find classes just around the corner, saving you time and travel.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🤝</div>
+                    <h3>Community Focused</h3>
+                    <p>We're dedicated to building a supportive network of families and teachers.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="tutor-cta">
+            <div class="container">
+                <h2>Share Your Passion. Become a Tutor.</h2>
+                <p>Join our community of instructors and build your teaching business with our easy-to-use platform.</p>
+                <a href="#" class="btn btn-primary">Learn More</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Nalanda Sports & Music Club Inc. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="#">FAQ</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
