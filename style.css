@@ -1,0 +1,309 @@
+/* --- Global Styles & Variables --- */
+:root {
+    --primary-blue: #005792;
+    --vibrant-orange: #F9A826;
+    --light-gray: #F4F4F4;
+    --dark-charcoal: #333333;
+    --white: #FFFFFF;
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Lato', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    color: var(--dark-charcoal);
+    line-height: 1.6;
+    background-color: var(--white);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin-top: 0;
+}
+
+h1 { font-size: 3rem; margin-bottom: 1rem; }
+h2 { font-size: 2.2rem; text-align: center; margin-bottom: 3rem; }
+p { margin-bottom: 1rem; }
+a { color: var(--primary-blue); text-decoration: none; }
+
+section {
+    padding: 60px 0;
+}
+
+/* --- Buttons --- */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-align: center;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-heading);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background-color: var(--vibrant-orange);
+    color: var(--white);
+}
+.btn-primary:hover {
+    background-color: #e0961f;
+}
+
+.btn-secondary {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: var(--primary-blue);
+}
+.btn-secondary:hover {
+     background-color: var(--white);
+}
+
+/* --- Header --- */
+.main-header {
+    background: var(--white);
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    font-family: var(--font-heading);
+}
+
+.main-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.main-nav ul li {
+    margin-left: 25px;
+}
+
+.main-nav ul li a {
+    font-weight: 600;
+    padding-bottom: 5px;
+    position: relative;
+    color: var(--dark-charcoal);
+}
+
+.main-nav ul li a:not(.btn)::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--vibrant-orange);
+    transition: width 0.3s ease;
+}
+
+.main-nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* --- Hero Section --- */
+.hero {
+    background-image: linear-gradient(rgba(0, 87, 146, 0.6), rgba(0, 87, 146, 0.6)), url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=2070&auto=format&fit=crop');
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 700px;
+    padding: 0 20px;
+}
+.hero-content h1 {
+    color: var(--white);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.search-bar {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    border-radius: 50px;
+}
+
+.search-bar input {
+    flex-grow: 1;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 50px 0 0 50px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.search-bar button {
+    border-radius: 0 50px 50px 0;
+}
+
+/* --- How It Works & Why Choose Us --- */
+.how-it-works, .why-choose-us {
+    background: var(--light-gray);
+}
+.steps, .features {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    gap: 30px;
+}
+.step-icon, .feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* --- Featured Programs --- */
+.program-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.card {
+    height: 350px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.card:hover {
+    transform: scale(1.03);
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    z-index: 1;
+}
+
+.card-content {
+    position: relative;
+    z-index: 2;
+}
+.card-content h3 { color: var(--white); font-size: 2rem; }
+
+.card-sports {
+    background-image: url('https://images.unsplash.com/photo-1543351368-3951f1a56499?q=80&w=1974&auto=format&fit=crop');
+}
+
+.card-music {
+    background-image: url('https://images.unsplash.com/photo-1520442352133-c2a3b015e1df?q=80&w=2070&auto=format&fit=crop');
+}
+
+/* --- Tutor CTA Section --- */
+.tutor-cta {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    text-align: center;
+}
+.tutor-cta h2 { color: var(--white); }
+
+/* --- Footer --- */
+.main-footer {
+    background: var(--dark-charcoal);
+    color: var(--light-gray);
+    padding: 25px 0;
+}
+.main-footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-footer a { color: var(--light-gray); margin-left: 20px; transition: color 0.3s; }
+.main-footer a:hover { color: var(--vibrant-orange); }
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.8rem; }
+    .steps, .features { flex-direction: column; }
+    .program-cards { grid-template-columns: 1fr; }
+    
+    .main-header {
+        padding: 10px 0;
+    }
+    .main-header .container { 
+        flex-direction: column; 
+    }
+    .main-nav ul { 
+        margin-top: 15px; 
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .main-nav ul li {
+        margin: 5px 10px;
+    }
+    
+    .hero {
+        height: 70vh;
+    }
+    .search-bar {
+        flex-direction: column;
+        border-radius: 25px;
+    }
+    .search-bar input, .search-bar button {
+        border-radius: 25px;
+    }
+    .search-bar button {
+        margin-top: 10px;
+    }
+
+    .main-footer .container { 
+        flex-direction: column; 
+    }
+    .footer-links { 
+        margin-top: 10px; 
+    }
+    .footer-links a { margin: 0 10px; }
+}
